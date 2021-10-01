@@ -2,16 +2,23 @@
   "name": "keeper",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://127.0.0.1:5003/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.13",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "start-server": "nodemon ./backend/app.js --ignore './src/'",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
