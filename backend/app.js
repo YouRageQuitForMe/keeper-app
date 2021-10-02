@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv').config({ path: "../.env" })
 const express = require('express');
 const mongoose = require('mongoose');
 var cors = require('cors')
@@ -9,7 +9,6 @@ const app = express();
 app.use(cors())
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
-
 const mongoDB = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PSW}@cluster0.ad4ql.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
 
 mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
@@ -50,12 +49,13 @@ app.post("/add", (req, res) => {
          quantità: req.body.quantità,
      });
      nuovoProdotto.save();
+     res.send("Ok")
 
 })
 
 app.delete("/delete/:id", (req, res) => {
     console.log("ID: " + req.params.id)
-    modelloProdotto.findOneAndDelete({_id: req.params.id}).then(() => {res.redirect("/")})
+    modelloProdotto.findOneAndDelete({_id: req.params.id}).then(() => {res.send("ok")})
 })
 
 

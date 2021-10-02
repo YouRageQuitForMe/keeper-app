@@ -5,7 +5,8 @@
 }
 
 body {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #333;
+    font-family:Arial, Helvetica, sans-serif
 }
 
 .App {
@@ -13,27 +14,64 @@ body {
     margin-top: 10vh;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
-    border: 2px solid rgb(255, 0, 128);
-    background: rgb(225, 207, 255)
+    width: 60%;    
 }
 
 .card {
-    border: 1px solid black;
-    width: 70%;
+    box-shadow: 0 0 40px rgba(12, 5, 133, 0.9);
+    background: linear-gradient( rgba(0, 0, 0, 0.106), rgba(0, 0, 0, 0.222) ), url("https://ketodietpulse.com/images/bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
     margin: 30px;
-    padding: 20px;
+    padding: 15px;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 10px;
+}
+.card h1 {
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    color: rgb(92, 55, 255);
 }
 .card button {
     float: right;
     background: transparent;
     border: none;
     font-size: 20px;
-    color: red;
+    color: rgb(21, 0, 255);
 }
 .card p {
-    margin-top: 10%;
+    color: black;
+    font-size: 20px;
+    margin-top: 30%;
     text-align: center;
+}
+
+.add {
+    margin: 30px;
+    font-family:monospace;
+    background:rgb(57, 0, 201);
+    width: 60px;
+    height: 60px;
+    background:rgb(75, 75, 187);
+    color: rgb(196, 201, 255);
+    border-radius: 10%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 50px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.add:hover {
+    transition: 0.5s;
+    background:rgb(102, 115, 255);
+}
+
+.btn-flex {
+    display: flex;
+    justify-content: center;
+    margin:auto;
 }
